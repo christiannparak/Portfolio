@@ -122,6 +122,20 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     margin-top: 20px; /* Adjust spacing */
+    overflow: hidden;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+   0% {
+    transform: translateY(0);
+   } 
+   50% {
+    transform: translateY(-10px);
+   }
+   100% {
+    transform: translateY(0);
+   }
 }
 
 .profile-pic img{
