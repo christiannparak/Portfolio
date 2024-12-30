@@ -104,7 +104,7 @@ nav ul li a:hover {
     border-radius: 20px;
     transition: background 0.3s, color 0.3s;
 }
-.contact-btn:hover {
+.hire-btn:hover, .contact-btn:hover {
   background:#ff007f;
   color:#fff;
 }
