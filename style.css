@@ -1,4 +1,5 @@
-*{
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,15 +12,17 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
 .container header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 10px 30px;
     background: #0a0c23;
     position: sticky;
     top: 0;
     z-index: 10;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -31,7 +34,7 @@ body {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -47,7 +50,7 @@ nav ul li a:hover {
 .download-btn {
     text-decoration: none;
     background: #ff007f;
-    padding: 10px 20px;
+    padding: 8px 16px;
     color: #fff;
     border-radius: 20px;
     transition: background 0.3s;
@@ -57,11 +60,15 @@ nav ul li a:hover {
     background: purple;
 }
 
+/* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 100px 50px;
+    padding: 50px 30px;
+    gap: 30px;
+    text-align: center;
 }
 
 .hero-content {
@@ -69,7 +76,7 @@ nav ul li a:hover {
 }
 
 .hero-content h1 {
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .hero-content h1 span {
@@ -78,7 +85,7 @@ nav ul li a:hover {
 
 .hero-content h2 {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .hero-content .role {
@@ -93,55 +100,146 @@ nav ul li a:hover {
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    justify-content: center;
     margin: 20px 0;
 }
+
 .contact-btn {
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: 2px solid #ff007f;
     color: #ff007f;
     border-radius: 20px;
     transition: background 0.3s, color 0.3s;
 }
-.hire-btn:hover, .contact-btn:hover {
-  background:#ff007f;
-  color:#fff;
+.contact-btn:hover {
+    background: #ff007f;
+    color: #fff;
 }
-.socials a{
-  color: #aaa;
-  margin-right: 10px;
-  font-size: 20px;
-  transition: color 0.3s;
+
+/* Social Links */
+.socials {
+    margin-top: 20px;
 }
-.socials a:hover{
-  color:#ff007f;
+
+.socials a {
+    color: #aaa;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: color 0.3s;
 }
+
+.socials a:hover {
+    color: #ff007f;
+}
+
+/* Profile Picture */
 .profile-pic {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Adjust spacing */
+    margin-top: 20px;
     overflow: hidden;
-    display: inline-block;
     animation: float 3s ease-in-out infinite;
 }
+
 @keyframes float {
-   0% {
-    transform: translateY(0);
-   } 
-   50% {
-    transform: translateY(-10px);
-   }
-   100% {
-    transform: translateY(0);
-   }
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.profile-pic img{
-width: 300px;
-height: auto;
-border-radius: 50%;
-border: 4px solid #fff;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.profile-pic img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .container header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .profile-pic img {
+        width: 200px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .container header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .download-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-btn {
+        padding: 6px 12px;
+    }
+
+    .profile-pic img {
+        width: 150px;
+    }
+
+    .socials a {
+        font-size: 18px;
+    }
 }
