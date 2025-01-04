@@ -115,27 +115,35 @@ nav ul li a:hover {
     white-space: nowrap;
 }
 
-.hire-btn:hover,
 .contact-btn:hover {
     background: #ff007f;
     color: #fff;
 }
 
 /* Social Links */
-.socials {
+/* Container for social media icons */
+.social-media-icons {
+    display: flex;
+    gap: 20px; /* Adjusts the space between icons */
+    justify-content: center; /* Centers the icons */
     margin-top: 20px;
 }
 
-.socials a {
-    color: #aaa;
-    margin-right: 10px;
-    font-size: 20px;
-    transition: color 0.3s;
+/* Individual icon styles */
+.social-icon {
+    font-size: 30px; /* Size of the icons */
+    color: #333; /* Default color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    border-style: 2px solid purple;
+    border-radius: 50%;
 }
 
-.socials a:hover {
-    color: #ff007f;
+/* Change icon color on hover */
+.social-icon:hover {
+    color:  purple; /* Color on hover (blue, can be changed) */
 }
+
 
 /* Profile Picture */
 .profile-pic {
