@@ -62,3 +62,55 @@ button:hover{
     background-color: purple;
     cursor: pointer;
 } 
+
+@media only screen and (max-width: 480px){
+    body{
+        padding: 10px;
+        font-size: 14px;
+    
+    }
+    
+    
+    h2{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .form{
+        background: transparent;
+        padding: 1px;
+        border-radius: 5px;
+        border: 2px solid rgba(148, 3, 126, 0.916);
+        margin-bottom: 10rem;
+       
+        
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 25rem;
+    }
+    input{
+        border-radius: 20px;
+        width: 20rem;
+        margin-left: 2rem;
+    }
+    textarea{
+        width: 20rem;
+        margin-left: 2rem;
+        border-radius: 20px;
+
+    }
+button{
+    margin-bottom: 14px;
+    width: 20rem;
+    margin-left: 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+}
+button:hover{
+    background-color: #ff007f;
+    cursor: pointer;
+}
+
+}
