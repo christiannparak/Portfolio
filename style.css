@@ -1,291 +1,116 @@
-/* General Reset */
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: #0a0c23;
-    color: #fff;
-    overflow-x: hidden;
-}
-
-/* Header */
-.container header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: #0a0c23;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    flex-wrap: nowrap; /* Prevent wrapping */
-}
-
-.logo {
-    font-size: 24px;
-    color: #fff;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #aaa;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
-
-.download-btn {
-    text-decoration: none;
-    background: #ff007f;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 20px;
-    transition: background 0.3s;
-    white-space: nowrap; /* Prevent button text from breaking */
-}
-
-.download-btn:hover {
-    background: purple;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 100px 50px;
-    text-align: left;
-    flex-wrap: nowrap; /* Prevent stacking */
-    gap: 50px;
-}
-
-.hero-content {
-    max-width: 500px;
-}
-
-.hero-content h1 {
-    font-size: 40px;
-}
-
-.hero-content h1 span {
-    color: #ff007f;
-}
-
-.hero-content h2 {
-    margin-top: 10px;
-    font-size: 30px;
-}
-
-.hero-content .role {
-    color: #ff007f;
-    animation: typing 4s steps(20) infinite;
-}
-
-.hero-content p {
-    margin: 20px 0;
-    color: #ccc;
-}
-
-.buttons {
-    display: flex;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.contact-btn {
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid #ff007f;
-    color: #ff007f;
-    border-radius: 20px;
-    transition: background 0.3s, color 0.3s;
-    white-space: nowrap;
-}
-
-.contact-btn:hover {
-    background: #ff007f;
-    color: #fff;
-}
-
-/* Social Links */
-/* Container for social media icons */
-.social-media-icons {
-    display: flex;
-    gap: 20px; /* Adjusts the space between icons */
-    justify-content: center; /* Centers the icons */
-    margin-top: 20px;
-}
-
-/* Individual icon styles */
-.social-icon {
-    font-size: 30px; /* Size of the icons */
-    color: #333; /* Default color */
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-    border-style: 2px solid purple;
-    border-radius: 50%;
-}
-
-/* Change icon color on hover */
-.social-icon:hover {
-    color:  purple; /* Color on hover (blue, can be changed) */
-}
-
-
-/* Profile Picture */
-.profile-pic {
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: float 3s ease-in-out infinite;
+    height: 100px;
+    margin: 2px;
+    background-color: #0a0c23;
+    text-align: center;
+}
+h2{
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 15px;
+
+
+    
+}
+.form{
+    background: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(148, 3, 126, 0.916);
+    margin-top: 80vh;
+    
+}
+ form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 40px;
+    width: 30rem;
+ }
+
+ form input {
+    text-align: center;
+    height: 25px;
+    padding: 5px;
+    border: 2px solid rgb(176, 12, 39);
+    font-family: 'Courier New', Courier, monospace;
+
+
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.form form textarea{
+    height: 10vh;
+    padding: 5px;
+    border: 2px solid;
 }
 
-.profile-pic img {
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+button{
+    height: 2rem;
+    background-color: #ff007f;
+    color:#fff;
 }
 
-/* Media Queries to Maintain Desktop Style */
+button:hover{
+    background-color: purple;
+    cursor: pointer;
+} 
 
-/* Tablets and Smaller Screens */
-@media (max-width: 1024px) {
-    .container header {
-        padding: 15px 30px;
+@media only screen and (max-width: 480px){
+    body{
+        padding: 10px;
+        font-size: 14px;
+    
     }
-
-    nav ul {
-        gap: 15px;
+    
+    
+    h2{
+        font-size: 2rem;
+        margin-top: 2rem;
     }
-
-    .hero {
-        gap: 30px;
-        padding: 50px 30px;
+    .form{
+        background: transparent;
+        padding: 1px;
+        border-radius: 5px;
+        border: 2px solid rgba(148, 3, 126, 0.916);
+        margin-bottom: 10rem;
+       
+        
     }
-
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .hero-content h2 {
-        font-size: 24px;
-    }
-
-    .profile-pic img {
-        width: 250px;
-    }
-}
-
-/* Mobile Devices */
-@media (max-width: 768px) {
-    .container header {
-        flex-direction: row;
-        flex-wrap: nowrap; /* Prevent stacking */
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-    }
-
-    nav ul {
+    form{
         display: flex;
-        gap: 10px;
+        flex-direction: column;
+        gap: 15px;
+        width: 25rem;
     }
+    input{
+        border-radius: 20px;
+        width: 20rem;
+        margin-left: 2rem;
+    }
+    textarea{
+        width: 20rem;
+        margin-left: 2rem;
+        border-radius: 20px;
 
-    nav ul li a {
-        font-size: 14px;
     }
-
-    .download-btn {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    .hero {
-        flex-direction: row;
-        flex-wrap: nowrap; /* Prevent stacking */
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        text-align: left;
-        padding: 30px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content h2 {
-        font-size: 20px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
-
-    .buttons {
-        gap: 10px;
-    }
-
-    .contact-btn {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    .profile-pic img {
-        width: 200px;
-    }
+button{
+    margin-bottom: 14px;
+    width: 20rem;
+    margin-left: 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+}
+button:hover{
+    background-color: #ff007f;
+    cursor: pointer;
 }
 
-/* Extra Small Devices */
-@media (max-width: 480px) {
-    .container header {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    nav ul {
-        gap: 8px;
-    }
-
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .hero-content h2 {
-        font-size: 18px;
-    }
-
-    .profile-pic img {
-        width: 150px;
-    }
 }
